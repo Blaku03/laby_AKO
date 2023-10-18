@@ -24,7 +24,7 @@
     <MASM Include="main2.asm">
       <Filter>Source Files</Filter>
     </MASM>
-    <MASM Include="learn.asm">
+    <MASM Include="big_let.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

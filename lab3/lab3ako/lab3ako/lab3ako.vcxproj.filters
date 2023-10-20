@@ -27,5 +27,8 @@
     <MASM Include="zad3_2_3.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="utf8_to_utf16.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

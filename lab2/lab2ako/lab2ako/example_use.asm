@@ -19,15 +19,18 @@ utf16_b dw 0104h, 0106h, 0118h, 0141h, 0143h, 00D3h, 015Ah, 0179h, 017Bh
 
 wczytany_tekst db 80 dup(0),0
 wielki_tekst db 80 dup(0),0
+wielki_tekst_W dw 80 dup(0),0
+tytul_W dw 'U','t','f',0
 
 .code 
 
 _change_To_Big@20 PROC
+;(order of arguments as in normal function : arg1, arg2, arg3...)
 ;first argument is char
 ;second argument is encoding address to search in
 ;third argument is encoding address to return from
-;fourth argument is encoding byte size jump of address to return from (utf16 support)
 ;fifth argument is encoding byte size jump of address to search from (utf16 support)
+;fourth argument is encoding byte size jump of address to return from (utf16 support)
 ;returns in edx changed code (only encoding size bytes will be changed)
 
 ;store orginal register values
@@ -41,7 +44,7 @@ mov edx, [esp + 4*4 + 4] ;char argument
 mov esi, [esp + 4*4 + 2*4] ;search in addres
 mov edi, [esp + 4*4 + 3*4] ;search from addres
 mov al, byte PTR [esp + 4*4 + 4*4] ;search in byte size
-mov ah, byte PTR [esp + 4*4 + 5*4] ;search from byte size
+mov ah, byte PTR [esp + 4*4 + 5*4] ;return from byte size
 
 ;special case for space:
 cmp edx, 20h
@@ -121,7 +124,21 @@ push edx
 call _change_To_Big@20
 add esp,20
 
+
 mov wielki_tekst[ecx], dl
+
+mov dl, wczytany_tekst[ecx]
+
+push 2
+push 1
+push OFFSET utf16_b
+push OFFSET latin2_s
+push edx
+call _change_To_Big@20	
+add esp,20
+
+mov wielki_tekst_W[2*ecx], dx
+xor dh, dh
 inc ecx
 cmp ecx, eax
 jne petla
@@ -131,6 +148,12 @@ push OFFSET wielki_tekst
 push 1
 call __write
 add esp,12
+
+push 0
+push OFFSET tytul_W
+push OFFSET wielki_tekst_W
+push 0
+call _MessageBoxW@16
 
 push 0
 call _ExitProcess@4

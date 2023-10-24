@@ -36,7 +36,7 @@ jnz ptl
 
 push 0
 push OFFSET tytul
-push OFFSET utf16LE
+push OFFSET utf16BE
 push 0
 call _MessageBoxW@16
 

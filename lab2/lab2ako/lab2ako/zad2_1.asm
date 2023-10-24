@@ -20,12 +20,6 @@ push dword PTR 1
 call __write 
 add esp, 12 
 
-push 4
-push dword PTR OFFSET cos
-push dword PTR OFFSET cos
-push dword PTR 0
-call _MessageBoxW@16
-
 push dword PTR 0 
 call _ExitProcess@4
 _main ENDP

@@ -12,8 +12,8 @@ public _main
 .data
 
 .code 
-_main PROC
 
+_main PROC
 
 push 0
 call _ExitProcess@4

@@ -13,36 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\glowne_zad">
+      <UniqueIdentifier>{92efa6b5-9e35-43b3-ba33-2c2c32017e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dodatkowe">
+      <UniqueIdentifier>{6cf5dd94-0717-49bc-aed7-dfb1153d7aa5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="main.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad2_1.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="main2.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="slash_to_space.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="detect_ako.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
     <MASM Include="template_file.asm">
       <Filter>Source Files</Filter>
     </MASM>
-    <MASM Include="utf16_BE.asm">
-      <Filter>Source Files</Filter>
+    <MASM Include="zad2_1.asm">
+      <Filter>Source Files\glowne_zad</Filter>
     </MASM>
     <MASM Include="del_string.asm">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
+    <MASM Include="detect_ako.asm">
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
+    <MASM Include="example_use.asm">
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
+    <MASM Include="zad2_2.asm">
+      <Filter>Source Files\glowne_zad</Filter>
+    </MASM>
+    <MASM Include="main2.asm">
+      <Filter>Source Files\glowne_zad</Filter>
+    </MASM>
+    <MASM Include="reverse_name.asm">
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
+    <MASM Include="slash_to_space.asm">
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
+    <MASM Include="utf16_BE.asm">
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
+    <MASM Include="zad2_3.asm">
+      <Filter>Source Files\glowne_zad</Filter>
     </MASM>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test_utf8.txt">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\glowne_zad</Filter>
     </Text>
   </ItemGroup>
 </Project>

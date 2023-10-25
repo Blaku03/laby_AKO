@@ -41,11 +41,11 @@ push esi
 push edi
 
 ;assign values to registers
-mov edx, [esp + 4*4 + 4] ;char argument
-mov esi, [esp + 4*4 + 2*4] ;search in addres
-mov edi, [esp + 4*4 + 3*4] ;search from addres
-mov al, byte PTR [esp + 4*4 + 4*4] ;search in byte size
-mov ah, byte PTR [esp + 4*4 + 5*4] ;return from byte size
+mov edx, [esp + 5*4 + 4] ;char argument
+mov esi, [esp + 5*4 + 2*4] ;search in addres
+mov edi, [esp + 5*4 + 3*4] ;search from addres
+mov al, byte PTR [esp + 5*4 + 4*4] ;search in byte size
+mov ah, byte PTR [esp + 5*4 + 5*4] ;return from byte size
 
 ;special case for space:
 cmp edx, 20h
@@ -83,6 +83,14 @@ je change_to_big_special
 
 cmp ebx, 9
 jne find_loop_utf16
+
+cmp ecx, 1
+je change_to_big_normal
+
+add esi, 18 
+xor ebx, ebx
+inc ecx
+jmp find_loop_utf16
 
 change_to_big_normal:
 

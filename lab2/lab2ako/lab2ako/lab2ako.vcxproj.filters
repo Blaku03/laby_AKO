@@ -54,6 +54,9 @@
     <MASM Include="zad2_3.asm">
       <Filter>Source Files\glowne_zad</Filter>
     </MASM>
+    <MASM Include="string_all.asm">
+      <Filter>Source Files\dodatkowe</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test_utf8.txt">

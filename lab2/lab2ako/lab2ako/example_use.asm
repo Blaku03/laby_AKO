@@ -36,6 +36,7 @@ _change_To_Big@20 PROC
 ;store orginal register values
 push eax
 push ebx
+push ecx
 push esi
 push edi
 
@@ -53,6 +54,7 @@ je end_func
 ;for easier function ebx will be used as counter
 
 xor ebx, ebx
+xor ecx, ecx
 cmp al,2
 je find_loop_utf16
 
@@ -65,7 +67,13 @@ je change_to_big_special
 cmp ebx, 9
 jne find_loop
 
-jmp change_to_big_normal
+cmp ecx, 1
+je change_to_big_normal
+
+add esi, 9
+xor ebx, ebx
+inc ecx
+jmp find_loop
 
 find_loop_utf16:
 
@@ -96,6 +104,7 @@ mov dx, [edi + 2*ebx - 2]
 end_func:
 pop edi
 pop esi
+pop ecx
 pop ebx
 pop eax
 

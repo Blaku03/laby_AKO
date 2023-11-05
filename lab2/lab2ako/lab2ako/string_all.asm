@@ -94,6 +94,7 @@ mov eax, dl_base
 sub eax, dl_find
 add eax, dl_replace
 
+
 push eax
 push OFFSET tekst_final
 push 1

@@ -5,7 +5,7 @@ extern _ExitProcess@4 : PROC
 public _main
 
 .data
-znaki db 12 dup (?)
+znaki db 12 dup (0),0
 
 .code
 wyswietl_EAX_new_line PROC

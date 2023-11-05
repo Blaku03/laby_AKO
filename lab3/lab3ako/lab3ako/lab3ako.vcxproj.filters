@@ -18,9 +18,6 @@
     <MASM Include="main.asm">
       <Filter>Source Files</Filter>
     </MASM>
-    <MASM Include="cw3.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
     <MASM Include="zad3_1.asm">
       <Filter>Source Files</Filter>
     </MASM>
@@ -28,6 +25,12 @@
       <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="utf8_to_utf16.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="zad3_4_5.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="zad3_6.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

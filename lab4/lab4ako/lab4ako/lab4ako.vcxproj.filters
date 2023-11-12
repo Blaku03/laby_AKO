@@ -15,41 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="sum_below.asm">
+    <MASM Include="main.asm">
       <Filter>Source Files</Filter>
     </MASM>
-    <MASM Include="zad3_1.asm">
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fun.c">
       <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad3_2_3.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="utf8_to_utf16.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad3_4_5.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="space_12.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="fun.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="remove_param.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="n_p_dwun.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="negative_b13.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="template.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="adding_8.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
+    </ClCompile>
   </ItemGroup>
 </Project>

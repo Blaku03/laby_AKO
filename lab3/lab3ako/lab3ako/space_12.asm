@@ -9,6 +9,58 @@ public _main
 dekoder db '0123456789ABCDEF'
 
 .code
+
+wyswietl_EAX_dwun PROC
+	pusha
+	sub esp, 12
+	mov ebp, esp
+
+	mov byte ptr [ebp], 0
+	mov esi, 11
+	mov ebx, 12 ;dzielna
+	mov ecx, 4 ;spacja co 3 znaki
+
+	mov edi, 0 ;licznik
+
+	zapis_tablica:
+	inc edi
+	cmp edi, ecx
+	jne dalej_nie_skok
+	mov edi, 0
+	mov byte ptr [ebp + esi], ' '
+	dec esi
+	jmp zapis_tablica
+	dalej_nie_skok:
+	xor edx, edx
+	div ebx
+	push ebx
+	mov bl, dekoder[edx]
+	mov byte ptr [ebp + esi], bl
+	pop ebx
+	dec esi
+	jz wypisz_konsola
+	cmp eax, 0
+	jnz zapis_tablica
+
+	dopeln_tablice:
+	or esi, esi
+	jz wypisz_konsola
+	mov byte ptr [ebp + esi], 0
+	dec esi
+	jmp dopeln_tablice
+
+
+	wypisz_konsola:
+	push dword PTR 12
+	push ebp
+	push dword PTR 1
+	call __write
+	add esp, 24
+	popa
+	ret
+wyswietl_EAX_dwun ENDP
+
+
 wyswietl_EAX PROC
 	pusha
 	sub esp, 12
@@ -117,7 +169,7 @@ wczytaj_do_EAX_hex ENDP
 _main PROC
 
 	call wczytaj_do_EAX_hex	
-	call wyswietl_EAX	
+	call wyswietl_EAX_dwun
 
 	push 0
 	call _ExitProcess@4

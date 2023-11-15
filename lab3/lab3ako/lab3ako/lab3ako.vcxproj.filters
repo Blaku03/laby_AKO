@@ -51,5 +51,8 @@
     <MASM Include="adding_8.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="div_comma.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

@@ -249,15 +249,22 @@ wyswietl_EAX_10 PROC
 wyswietl_EAX_10 ENDP
 
 _main PROC
-;	call wczytaj_EAX_8
-;	mov edx, eax
-;	call wczytaj_EAX_8
+	call wczytaj_EAX_8
+	mov edx, eax
+	call wczytaj_EAX_8
 
-;	add eax, edx
-;	call wyswietl_EAX_8	
-	call wczytaj_EAX_20	
-	call wyswietl_EAX_10	
-	call wyswietl_EAX_20	
+	;wyswietlanie tych liczb
+	push eax
+	mov eax, edx
+	call wyswietl_EAX_10
+	pop eax
+	call wyswietl_EAX_10
+	
+	;sumowanie
+	add eax, edx
+	call wyswietl_EAX_10
+	call wyswietl_EAX_8
+
 
 	push 0
 	call _ExitProcess@4

@@ -33,9 +33,6 @@
     <MASM Include="space_12.asm">
       <Filter>Source Files</Filter>
     </MASM>
-    <MASM Include="fun.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
     <MASM Include="remove_param.asm">
       <Filter>Source Files</Filter>
     </MASM>
@@ -52,6 +49,12 @@
       <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="div_comma.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="big_num.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="puts.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

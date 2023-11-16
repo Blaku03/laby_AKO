@@ -6,7 +6,7 @@ extern _ExitProcess@4 : PROC
 public _main
 
 .data
-dekoder db '01234567109ABCDEFGHIJ'
+dekoder db '0123456789ABCDEFGHIJ'
 
 .code
 
@@ -60,7 +60,7 @@ wyswietl_EAX_10 PROC
 	mov edi, esp
 
 	mov byte ptr [edi], 0
-	mov byte ptr [edi + 11], 0Ah
+	mov byte ptr [edi + 11], 0
 
 	mov ebx, 10
 	xor ecx, ecx
@@ -118,7 +118,7 @@ dzielenie PROC
 
 	mov byte ptr [edi], ','
 	inc esi
-	mov ecx, 3 ;number of decimal points
+	mov ecx, 10 ;number of decimal points
 	imul eax, edx, 10 ;move comma to eax
 
 	;assuming decmials now

@@ -15,43 +15,26 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="zad4_1a.asm">
+    <None Include="gwiazdki.asm">
       <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad4_2a.asm">
+    </None>
+    <None Include="zad6_1.asm">
       <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad4_3a.asm">
+    </None>
+    <None Include="zad6_2.asm">
       <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad4_4a.asm">
+    </None>
+    <None Include="zad6_3.asm">
       <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="zad4_5a.asm">
+    </None>
+    <None Include="zad6_4.asm">
       <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="szukaj64a.asm">
+    </None>
+    <None Include="zad6_5.asm">
       <Filter>Source Files</Filter>
-    </MASM>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="zad4_1.c">
+    </None>
+    <None Include="linie.asm">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zad4_2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zad4_3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zad4_4.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zad4_5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="szukaj64.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    </None>
   </ItemGroup>
 </Project>

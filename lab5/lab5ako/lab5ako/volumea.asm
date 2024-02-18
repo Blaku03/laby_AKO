@@ -6,6 +6,11 @@ trzy dd 3.0
 
 .code
 _objetosc_kuli PROC
+	mov eax, 80000001h
+	mov ebx, 0
+	bt eax, ebx
+
+
 	push ebp
 	mov ebp, esp
 

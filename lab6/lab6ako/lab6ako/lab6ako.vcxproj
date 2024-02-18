@@ -141,6 +141,8 @@
   <ItemGroup>
     <None Include="gwiazdki.asm" />
     <None Include="linie.asm" />
+    <None Include="snake.asm" />
+    <None Include="snake2.asm" />
     <None Include="zad6_1.asm" />
     <None Include="zad6_2.asm" />
     <None Include="zad6_3.asm" />

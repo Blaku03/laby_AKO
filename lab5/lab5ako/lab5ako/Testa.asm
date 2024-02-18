@@ -10,9 +10,19 @@ dwa dd 2.0
 cztery dd 4.0
 x1 dd ?
 x2 dd ?
+data dd 00d73000h
 
 .code
 _fun PROC
+	mov ax, 1
+	mov cx, word ptr data
+	db 66h, 8bh, 0dh, 00h, 30h, 0d7h, 00h
+
+	mov cx, word ptr [data + ebp]
+	db 66h, 8bh, 0ch, 2dh, 00h, 30h, 0d7h, 00h
+
+
+
 	finit
 	fld wsp_a
 	fld wsp_b

@@ -3,6 +3,8 @@
 
 .code
 _dodaj_jeden PROC
+
+
 	push ebp
 	mov ebp, esp
 

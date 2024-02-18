@@ -54,6 +54,9 @@
     <MASM Include="volumea.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="egzmaina.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Test.c">
@@ -90,6 +93,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="volume.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="egzamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sourcet1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

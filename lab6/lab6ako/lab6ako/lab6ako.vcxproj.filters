@@ -36,5 +36,11 @@
     <None Include="linie.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="snake.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="snake2.asm">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -62,7 +62,7 @@ wait_for_x:
 	int 16h
 
 ;zf flag is set when key pressed
-jnz wait_for_x
+jz wait_for_x
 
 ;odczytanie klawisza
 mov ah, 0
